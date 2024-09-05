@@ -9,7 +9,7 @@ const store = configureStore({
   reducer: {
     places: placesReducer,
   },
-  middleware: [epicMiddleware],
+  middleware:()=> [epicMiddleware],
 });
 
 epicMiddleware.run(fetchPlacesEpic);
